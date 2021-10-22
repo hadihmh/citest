@@ -43,9 +43,8 @@ jobs:
         with:
           artifacts: "build/app/outputs/apk/release/*.apk"
           token: ${{secrets.TOKEN}}
-            build_ios:
+  build_ios:
     name: Build Flutter (iOS)
-    needs: [flutter_test]
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
